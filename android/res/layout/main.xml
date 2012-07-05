@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" >
+    
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Heart Rate" android:textSize="40sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="top"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:layout_centerVertical="true"
+            android:textSize="120sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/label"
+            android:layout_toRightOf="@id/label"
+            android:includeFontPadding="false"
+            android:text="bpm"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/indicator"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/heart" />
+    </RelativeLayout>
+    
+    
+    <com.mlst.heartmonitor.GraphView android:id="@+id/graph" android:layout_width="match_parent" android:layout_height="300dp"/>
+</LinearLayout>
